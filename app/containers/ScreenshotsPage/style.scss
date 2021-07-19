@@ -1,0 +1,17 @@
+.ct_link {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+
+  .ct_image {
+    display: flex;
+    flex-direction: column;
+    width: calc(50% - 10px);
+    margin-bottom: 10px;
+
+    span {
+      margin: 0px auto;
+    }
+  }
+}

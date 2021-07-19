@@ -1,0 +1,58 @@
+.app-wrapper {
+  max-width: calc(768px + 16px * 2);
+  margin: 0 auto;
+  display: flex;
+  min-height: 100%;
+  padding: 0 16px;
+  flex-direction: column;
+}
+
+#toast-container {
+  background: transparent;
+  opacity: 0.9;
+
+  .toast-success {
+    background-color: green;
+    -moz-box-shadow: 0 10px 20px 0 rgba(0, 0, 0, 0.31) !important;
+    -webkit-box-shadow: 0 10px 20px 0 rgba(0, 0, 0, 0.31) !important;
+    box-shadow: 0 10px 20px 0 rgba(0, 0, 0, 0.31) !important;
+    border-radius: 10px;
+  }
+
+  .toast-error {
+    background-color: red;
+    -moz-box-shadow: 0 10px 20px 0 rgba(0, 0, 0, 0.31) !important;
+    -webkit-box-shadow: 0 10px 20px 0 rgba(0, 0, 0, 0.31) !important;
+    box-shadow: 0 10px 20px 0 rgba(0, 0, 0, 0.31) !important;
+    border-radius: 10px;
+  }
+
+
+  & > div {
+    padding: 15px 15px 15px 15px !important;
+    width: 400px;
+
+    .toast-title {
+      font-family: 'Roboto', sans-serif;
+      font-size: 18px;
+      font-weight: 500;
+      letter-spacing: 0.5px;
+      color: #fff;
+    }
+
+    .toast-message {
+      font-family: 'Roboto', sans-serif;
+      font-size: 14px;
+      font-weight: 500;
+      letter-spacing: 0.4px;
+      color: #fff;
+      margin-top: 10px;
+    }
+  }
+}
+
+.toast-top-right {
+  position: absolute;
+  top: 70px;
+  right: 30px;
+}
