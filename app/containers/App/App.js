@@ -1,6 +1,6 @@
 import React from 'react';
 import { Helmet } from 'react-helmet';
-import { Switch, Route } from 'react-router-dom';
+import { Switch, Route, Redirect } from 'react-router-dom';
 
 import LinksPage from 'containers/LinksPage/Loadable';
 import ScreenshotsPage from 'containers/ScreenshotsPage/Loadable';
@@ -19,8 +19,9 @@ const App = () => (
     </Helmet>
     <Header />
     <Switch>
-      <Route exact path="/links" component={LinksPage} />
-      <Route exact path="/screenshots" component={ScreenshotsPage} />
+      <Redirect exact from="/" to="/links" />
+      <Route path="/links" component={LinksPage} />
+      <Route path="/screenshots" component={ScreenshotsPage} />
       <Route path="" component={NotFoundPage} />
     </Switch>
     <Footer />
